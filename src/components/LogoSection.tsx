@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import companyLogo from "../assets/logo.png"; // Replace with your actual logo file path
+import companyLogo from "../assets/companylogo.png"; // Replace with your actual logo file path
 
 export default function LogoSection() {
   return (
