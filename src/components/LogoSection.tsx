@@ -35,11 +35,7 @@ export default function LogoSection() {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          <img
-            src={companyLogo}
-            alt="Company Logo"
-            className="mx-auto w-48 md:w-64 transition-all duration-300 transform hover:scale-105"
-          />
+         
         </motion.div>
 
         {/* Subtitle */}
