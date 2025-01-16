@@ -41,9 +41,10 @@ const Services = () => {
           <motion.div
             className={`${
               expanded ? "w-[500px] h-[500px]" : "w-40 h-40"
-            } bg-black text-white rounded-full flex justify-center items-center absolute transition-all duration-500 ease-in-out cursor-pointer border border-white`}
+            } bg-black text-white rounded-full flex justify-center items-center absolute transition-all duration-500 ease-in-out cursor-pointer border border-white shadow-lg hover:scale-105`}
             onHoverStart={() => setExpanded(true)}
             onHoverEnd={() => setExpanded(false)}
+            title="Hover to view services" // Tooltip text for hover
           >
             <motion.div
               className="text-center font-bold text-2xl"
