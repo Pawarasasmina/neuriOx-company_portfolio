@@ -41,7 +41,7 @@ export const projects = [
     description: 'Portfolio site for client to represent his ability and projects',
     image: osanda,
     technologies: ['React', 'TypeScript', 'PostgreSQL', 'Express'],
-    liveUrl: 'https://osanda.me'
+    liveUrl: 'https://www.osanda.me'
   },
  
 ];
