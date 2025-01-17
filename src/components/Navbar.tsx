@@ -39,7 +39,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-             
+            <img src={logo} alt="logo" className="h-8 w-auto" /> {/* Displaying logo */}
             </div>
           </div>
           <div className="hidden md:block">
