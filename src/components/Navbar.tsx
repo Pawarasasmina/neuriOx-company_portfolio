@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link as ScrollLink } from "react-scroll"; // Import react-scroll
 import logo from "./logoo.png"; // Import logo
 
 export default function Navbar() {
@@ -39,41 +40,56 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-            <img src={logo} alt="logo" className="h-8 w-auto" /> {/* Displaying logo */}
+              <img src={logo} alt="logo" className="h-8 w-auto" /> {/* Displaying logo */}
             </div>
           </div>
           <div className="hidden md:block">
             <div className="flex justify-center items-center space-x-6">
-              <a
-                href="#home"
-                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-all"
+              <ScrollLink
+                to="home"
+                smooth={true}
+                duration={500}
+                offset={-80}
+                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-all cursor-pointer"
               >
                 Home
-              </a>
-              <a
-                href="#services"
-                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-all"
+              </ScrollLink>
+              <ScrollLink
+                to="services"
+                smooth={true}
+                duration={500}
+                offset={-80}
+                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-all cursor-pointer"
               >
                 Services
-              </a>
-              <a
-                href="#about"
-                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-all"
+              </ScrollLink>
+              <ScrollLink
+                to="about"
+                smooth={true}
+                duration={500}
+                offset={-80}
+                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-all cursor-pointer"
               >
                 About
-              </a>
-              <a
-                href="#projects"
-                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-all"
+              </ScrollLink>
+              <ScrollLink
+                to="projects"
+                smooth={true}
+                duration={500}
+                offset={-80}
+                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-all cursor-pointer"
               >
                 Projects
-              </a>
-              <a
-                href="#contact"
-                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-all"
+              </ScrollLink>
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={500}
+                offset={-80}
+                className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-all cursor-pointer"
               >
                 Contact
-              </a>
+              </ScrollLink>
             </div>
           </div>
           <div className="md:hidden">
@@ -90,36 +106,56 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-black rounded-lg shadow-md mt-2">
           <div className="px-4 pt-4 pb-4 space-y-2">
-            <a
-              href="#home"
-              className="block text-white px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800"
+            <ScrollLink
+              to="home"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              onClick={() => setIsOpen(false)} // Close menu on click
+              className="block text-white px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 cursor-pointer"
             >
               Home
-            </a>
-            <a
-              href="#services"
-              className="block text-white px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800"
+            </ScrollLink>
+            <ScrollLink
+              to="services"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              onClick={() => setIsOpen(false)}
+              className="block text-white px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 cursor-pointer"
             >
               Services
-            </a>
-            <a
-              href="#about"
-              className="block text-white px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800"
+            </ScrollLink>
+            <ScrollLink
+              to="about"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              onClick={() => setIsOpen(false)}
+              className="block text-white px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 cursor-pointer"
             >
               About
-            </a>
-            <a
-              href="#projects"
-              className="block text-white px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800"
+            </ScrollLink>
+            <ScrollLink
+              to="projects"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              onClick={() => setIsOpen(false)}
+              className="block text-white px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 cursor-pointer"
             >
               Projects
-            </a>
-            <a
-              href="#contact"
-              className="block text-white px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800"
+            </ScrollLink>
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              onClick={() => setIsOpen(false)}
+              className="block text-white px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800 cursor-pointer"
             >
               Contact
-            </a>
+            </ScrollLink>
           </div>
         </div>
       )}
