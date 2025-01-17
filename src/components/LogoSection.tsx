@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import companyLogo from "../assets/companylogo.png"; // Replace with your actual logo file path
+import baos from "./baos.png";
+import sisiratailors from "./sisiratailors.png";
+import suncity from "./suncity.png";
 
 export default function LogoSection() {
   return (
@@ -28,14 +30,42 @@ export default function LogoSection() {
           Our Trusted Partners
         </motion.h2>
 
-        {/* Logo Animation */}
+        {/* Logo Section */}
         <motion.div
-          className="mt-12"
-          initial={{ scale: 0.5, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 items-center justify-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-         
+          {/* BAOS Logo */}
+          <div className="flex flex-col items-center">
+            <img
+              src={baos}
+              alt="BAOS Logo"
+              className="w-40 h-40 object-contain"
+            />
+            <p className="mt-4 text-lg font-semibold text-gray-700">BAOS</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              src={suncity}
+              alt="suncity Logo"
+              className="w-40 h-40 object-contain"
+            />
+            <p className="mt-4 text-lg font-semibold text-gray-700">suncity</p>
+          </div>
+          
+          {/* Sisira Tailors Logo */}
+          <div className="flex flex-col items-center">
+            <img
+              src={sisiratailors}
+              alt="Sisira Tailors Logo"
+              className="w-40 h-40 object-contain"
+            />
+            <p className="mt-4 text-lg font-semibold text-gray-700">
+              Sisira Tailors
+            </p>
+          </div>
         </motion.div>
 
         {/* Subtitle */}

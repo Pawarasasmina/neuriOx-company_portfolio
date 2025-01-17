@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 const Services = () => {
   const [expanded, setExpanded] = useState(false);
 
+  const circleRadius = 250; // Size of the circle when expanded
+  const angleStep = 360 / 6; // Adjust based on services length
+
   const services = [
     { title: "Software Development", icon: "💻" },
     { title: "Web Development", icon: "🌐" },
@@ -14,14 +17,14 @@ const Services = () => {
     { title: "IT Consulting", icon: "⚙️" },
   ];
 
-  const isMobile = window.innerWidth <= 768; // Check if the screen is mobile
+  const isMobile = window.innerWidth <= 768; // Detect mobile view
 
   return (
     <div id="services" className="relative bg-black text-white py-48">
-      {/** Mobile View **/}
       {isMobile ? (
+        // Mobile View
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-6">Our Services</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
           <div className="grid grid-cols-2 gap-4">
             {services.map((service, index) => (
               <div
@@ -39,7 +42,7 @@ const Services = () => {
           </div>
         </div>
       ) : (
-        /** Desktop View **/
+        // Desktop View
         <>
           {/* Video Background */}
           <video
@@ -58,14 +61,15 @@ const Services = () => {
 
           {/* Content */}
           <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="relative flex flex-col justify-center items-center mt-12">
+            <div className="relative flex justify-center items-center mt-12">
               {/* Circle Button */}
               <motion.div
                 className={`${
                   expanded ? "w-[500px] h-[500px]" : "w-40 h-40"
                 } bg-black text-white rounded-full flex justify-center items-center absolute transition-all duration-500 ease-in-out cursor-pointer border border-white shadow-lg hover:scale-105`}
-                onClick={() => setExpanded(!expanded)}
-                title="Tap to view services"
+                onHoverStart={() => setExpanded(true)}
+                onHoverEnd={() => setExpanded(false)}
+                title="Hover to view services" // Tooltip text for hover
               >
                 <motion.div
                   className="text-center font-bold text-2xl"
@@ -79,9 +83,9 @@ const Services = () => {
               {/* Service Icons */}
               {expanded &&
                 services.map((service, index) => {
-                  const angle = (index * 360) / services.length;
-                  const x = 250 * Math.cos((angle * Math.PI) / 180);
-                  const y = 250 * Math.sin((angle * Math.PI) / 180);
+                  const angle = index * angleStep;
+                  const x = circleRadius * Math.cos((angle * Math.PI) / 180);
+                  const y = circleRadius * Math.sin((angle * Math.PI) / 180);
 
                   return (
                     <motion.div
@@ -97,9 +101,7 @@ const Services = () => {
                       <div className="p-12 bg-gray-900 rounded-full shadow-md">
                         <span className="text-4xl text-gray-800">{service.icon}</span>
                       </div>
-                      <p className="mt-2 text-lg font-bold text-gray-400">
-                        {service.title}
-                      </p>
+                      <p className="mt-2 text-lg font-bold text-gray-400">{service.title}</p>
                     </motion.div>
                   );
                 })}
