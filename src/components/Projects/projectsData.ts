@@ -1,8 +1,10 @@
 import dilu from './images/dilu.png';
-import pixel from './images/pixel.png';
-import hospital from './images/hospital.png';
+import pawara from './images/pawara.png';
+import osanda from './images/osanda.png';
 import tailorshop from './images/tailorshop.png';
 import baos from './images/baos.png';
+import pixel from './images/pixel.png';
+import hospital from './images/hospital.png';
 
 export const projects = [
   {
@@ -29,6 +31,7 @@ export const projects = [
     liveUrl: 'https://sisira-tailors.vercel.app/',
     githubUrl: 'https://github.com'
   },
+ 
   {
     title: 'E-commerce Website ',
     description: 'Fully functional virtual shopping mall website for bring e-commerce experienc to next level',
@@ -43,5 +46,19 @@ export const projects = [
     technologies: ['React', 'TypeScript', 'PostgreSQL', 'Express'],
     
   },
+  {
+    title: 'Portfolio Site ',
+    description: 'Portfolio site for client to represent his ability and projects',
+    image: pawara,
+    technologies: ['React', 'TypeScript', 'PostgreSQL', 'Express'],
+    liveUrl: 'https://pawara.me'
+  },
+  {
+    title: 'Portfolio Site ',
+    description: 'Portfolio site for client to represent his ability and projects',
+    image: osanda,
+    technologies: ['React', 'TypeScript', 'PostgreSQL', 'Express'],
+    liveUrl: 'https://www.osanda.me'
+  }
  
 ];
