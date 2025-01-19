@@ -1,6 +1,6 @@
 import dilu from './images/dilu.png';
-import pawara from './images/pawara.png';
-import osanda from './images/osanda.png';
+import pixel from './images/pixel.png';
+import hospital from './images/hospital.png';
 import tailorshop from './images/tailorshop.png';
 import baos from './images/baos.png';
 
@@ -30,18 +30,18 @@ export const projects = [
     githubUrl: 'https://github.com'
   },
   {
-    title: 'Portfolio Site ',
-    description: 'Portfolio site for client to represent his ability and projects',
-    image: pawara,
+    title: 'E-commerce Website ',
+    description: 'Fully functional virtual shopping mall website for bring e-commerce experienc to next level',
+    image: pixel,
     technologies: ['React', 'TypeScript', 'PostgreSQL', 'Express'],
-    liveUrl: 'https://pawara.me'
+    
   },
   {
-    title: 'Portfolio Site ',
-    description: 'Portfolio site for client to represent his ability and projects',
-    image: osanda,
+    title: 'Healthcare Management System ',
+    description: 'Online system for handling medical and diagnostic services',
+    image: hospital,
     technologies: ['React', 'TypeScript', 'PostgreSQL', 'Express'],
-    liveUrl: 'https://www.osanda.me'
+    
   },
  
 ];
