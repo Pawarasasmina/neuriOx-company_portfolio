@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import baos from "./baos.png";
-import sisiratailors from "./sisiratailors.png";
-import suncity from "./suncity.png";
+import sisiratailors from "./Sisira Logo.png";
+import suncity from "./logoSuncity.png";
+import Dilu from "./DBlogo.png";
 
 export default function LogoSection() {
   return (
@@ -32,7 +33,7 @@ export default function LogoSection() {
 
         {/* Logo Section */}
         <motion.div
-          className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 items-center justify-center"
+          className="mt-12 grid grid-cols-1 sm:grid-cols-4 gap-8 items-center justify-center"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1 }}
@@ -45,6 +46,14 @@ export default function LogoSection() {
               className="w-40 h-40 object-contain"
             />
             <p className="mt-4 text-lg font-semibold text-gray-700">BAOS</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              src={Dilu}
+              alt="Dilu Logo"
+              className="w-40 h-40 object-contain"
+            />
+            <p className="mt-4 text-lg font-semibold text-gray-700">Dilu Beats</p>
           </div>
           <div className="flex flex-col items-center">
             <img
