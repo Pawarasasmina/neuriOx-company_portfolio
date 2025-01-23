@@ -16,11 +16,11 @@ export const projects = [
     githubUrl: 'https://github.com'
   },
   {
-    title: 'Webiste For Singer',
+    title: 'Dilu Beats - Web Page',
     description: 'A full-featured website for singer for showcase his all works',
     image: dilu,
     technologies: ['React', 'Node.js', 'MongoDB', 'Redux'],
-    liveUrl: 'https://web-site-for-singer.vercel.app/',
+    liveUrl: 'https://www.dilubeats.com/',
     githubUrl: 'https://github.com'
   },
   {
@@ -45,20 +45,7 @@ export const projects = [
     image: hospital,
     technologies: ['React', 'TypeScript', 'PostgreSQL', 'Express'],
     
-  },
-  {
-    title: 'Portfolio Site ',
-    description: 'Portfolio site for client to represent his ability and projects',
-    image: pawara,
-    technologies: ['React', 'TypeScript', 'PostgreSQL', 'Express'],
-    liveUrl: 'https://pawara.me'
-  },
-  {
-    title: 'Portfolio Site ',
-    description: 'Portfolio site for client to represent his ability and projects',
-    image: osanda,
-    technologies: ['React', 'TypeScript', 'PostgreSQL', 'Express'],
-    liveUrl: 'https://www.osanda.me'
   }
+ 
  
 ];
